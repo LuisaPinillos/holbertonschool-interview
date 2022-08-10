@@ -20,8 +20,8 @@ def canUnlockAll(boxes):
     boxes -> a list of list with the boxes and their keys.
     the function returns true if all boxes are opened
     or false if not.
-    keybox -> number of the box.
-    number -> key inside the box.
+    keybox -> key inside the box.
+    number -> number of the box.
     """
     lenbox = len(boxes)
     listnum = [0]
