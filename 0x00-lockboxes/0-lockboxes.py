@@ -5,18 +5,12 @@
 
 def canUnlockAll(boxes):
     lenbox = len(boxes)
-    sublist = 0
-    number = 0
-    i = 0
     listnum = []
 
-    for sublist in boxes:
-        for number in sublist:
-            listnum.append(number)
-
-    for i in range(0, lenbox-1):
-        if i in listnum:
-            i+=1
-        else:
-            return("False")
-    return("True")
+    for keybox in boxes:
+        for number in keybox:
+            if number not in listnum:
+                listnum.append(number)
+    if len(listnum) == lenbox:
+        return("True")
+    return("False")
