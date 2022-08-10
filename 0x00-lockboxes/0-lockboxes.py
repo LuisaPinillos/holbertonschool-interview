@@ -24,12 +24,12 @@ def canUnlockAll(boxes):
     number -> key inside the box.
     """
     lenbox = len(boxes)
-    listnum = []
+    listnum = [0]
 
-    for keybox in boxes:
-        for number in keybox:
-            if number not in listnum:
-                listnum.append(number)
+    for number in listnum:
+        for keybox in boxes[number]:
+            if keybox not in listnum and keybox < lenbox:
+                listnum.append(keybox)
     if len(listnum) == lenbox:
         return("True")
     return("False")
