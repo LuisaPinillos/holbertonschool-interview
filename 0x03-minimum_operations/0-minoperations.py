@@ -11,10 +11,10 @@ def minOperations(n):
     if type(n) is not int or n < 2:
         return 0
 
-    num_op = 0
+    factors = []
 
     for i in range(2, n):
         while n % i == 0 and n != 0:
-            num_op += i
+            factors.append(i)
             n /= 2
-    return num_op
+    return sum(factors)
