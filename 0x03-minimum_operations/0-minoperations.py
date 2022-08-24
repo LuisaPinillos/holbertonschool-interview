@@ -10,11 +10,11 @@ def minOperations(n):
 
     if type(n) is not int or n <= 1:
         return 0
+    else:
+        num_op = 0
 
-    num_op = 0
-
-    for i in range(2, n+1):
-        while n % i == 0 and n != 0:
-            num_op = num_op + i
-            n = n / 2
-    return num_op
+        for i in range(2, n+1):
+            while n % i == 0 and n != 0:
+                num_op += i
+                n /= 2
+        return num_op
