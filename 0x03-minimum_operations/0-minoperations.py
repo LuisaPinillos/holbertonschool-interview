@@ -8,7 +8,7 @@ Returns an integer. If n is impossible to achieve, return 0.
 
 def minOperations(n):
 
-    if type(n) is not int or n <= 1:
+    if type(n) is not int or n < 2:
         return 0
     else:
         num_op = 0
