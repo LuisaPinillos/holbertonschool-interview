@@ -15,6 +15,9 @@ def minOperations(n):
 
         for i in range(2, n+1):
             while n % i == 0 and n != 0:
-                num_op += i
-                n /= 2
+                if n != 0:
+                    num_op += i
+                    n /= 2
+                else:
+                    num_op += i
         return num_op
