@@ -8,13 +8,13 @@ Returns an integer. If n is impossible to achieve, return 0.
 
 def minOperations(n):
 
-    if type(n) is not int or n < 2:
+    if n < 2:
         return 0
 
-    factors = []
+    num_op = 0
 
     for i in range(2, n):
         while n % i == 0 and n != 0:
-            factors.append(i)
+            num_op += i
             n /= 2
-    return sum(factors)
+    return num_op
